@@ -1,0 +1,25 @@
+.header {
+  background-color: var(--clr-navigation);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .logo {
+    color: var(--clr-white);
+  }
+
+  .dropdown {
+    color: var(--clr-white);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    .avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+}

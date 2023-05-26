@@ -1,5 +1,5 @@
 :root {
-  --nav-width: min(100%, 300px);
+  --nav-width: min(100%, 250px);
 
   --clr-navigation: blue;
   --clr-white: #ffffff;
@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
+  padding-left: var(--nav-width);
 }
 
 ul {

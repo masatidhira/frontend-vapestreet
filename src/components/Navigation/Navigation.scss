@@ -1,0 +1,42 @@
+.main-nav {
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--clr-navigation);
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  .content {
+    .logo {
+      color: var(--clr-white);
+      font-weight: bold;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .nav-links {
+      li {
+        color: var(--clr-white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 2rem;
+
+        p {
+          flex: 1;
+          padding: 0 0.5rem;
+        }
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+}

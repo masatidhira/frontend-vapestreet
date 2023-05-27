@@ -5,6 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: relative;
 
   .logo {
     color: var(--clr-white);
@@ -21,5 +22,42 @@
       height: 35px;
       border-radius: 50%;
     }
+
+    .dropdown-button {
+      background-color: transparent;
+      color: var(--clr-white);
+      display: flex;
+      align-items: center;
+      border-radius: 0;
+      gap: 0.4rem;
+      padding: 0;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: var(--clr-navigation);
+    color: var(--clr-white);
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    transform: translateY(0);
+    transition: transform 0.5s;
+    z-index: -1;
+
+    ul > li {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .icon {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+  }
+
+  .isOpen {
+    transform: translateY(100%);
   }
 }

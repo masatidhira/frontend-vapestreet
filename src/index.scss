@@ -4,7 +4,6 @@
   --clr-navigation: blue;
   --clr-white: #ffffff;
   --clr-gray: #d8d8d8;
-
   --clr-dark: black;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -25,14 +24,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  min-height: 100vh;
-  padding-left: var(--nav-width);
 }
 
 ul {

@@ -1,9 +1,10 @@
-import Navigation from './components/Navigation';
+// import HomeLayout from './components/HomeLayout';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
     <>
-      <Navigation />
+      <LoginPage />
     </>
   );
 }

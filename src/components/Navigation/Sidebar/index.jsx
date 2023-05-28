@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { VscTriangleRight } from 'react-icons/vsc';
 import {
   TbDashboard,
@@ -27,7 +28,7 @@ const Sidebar = () => {
         <ul className="nav-links">
           <li className="nav-link">
             <TbDashboard className="icon" />
-            <p>Dashboard</p>
+            <NavLink to="/">Dashboard</NavLink>
           </li>
           <hr />
           <li className="nav-dropdown mb-1">
@@ -46,8 +47,12 @@ const Sidebar = () => {
                 isOpenDropdown1 ? 'dropdown-links' : 'dropdown-links closed'
               }
             >
-              <li>Barang</li>
-              <li>Kategori</li>
+              <li>
+                <NavLink to="/data-barang">Barang</NavLink>
+              </li>
+              <li>
+                <NavLink to="/kategori">Kategori</NavLink>
+              </li>
             </ul>
           </li>
           <li className="nav-dropdown">
@@ -66,16 +71,19 @@ const Sidebar = () => {
                 isOpenDropdown2 ? 'dropdown-links' : 'dropdown-links closed'
               }
             >
-              <li>Transaksi Jual</li>
-              <li>Laporan Penjualan</li>
+              <li>
+                <NavLink to="/transaksi-jual">Transaksi Jual</NavLink>
+              </li>
+              <li>
+                <NavLink to="/laporan-penjualan">Laporan Penjualan</NavLink>
+              </li>
             </ul>
           </li>
           <hr />
           <li className="nav-link">
             <TbSettings className="icon" />
-            <p>Pengaturan Toko</p>
+            <NavLink to="/pengaturan-toko">Pengaturan Toko</NavLink>
           </li>
-
           <hr />
         </ul>
       </div>

@@ -54,6 +54,7 @@
           .icon-arrow {
             width: 1rem;
             height: 1rem;
+            transition: transform 0.5s;
           }
         }
 
@@ -75,6 +76,10 @@
 
         .closed {
           height: 0;
+        }
+
+        .rotate {
+          transform: rotate(90deg);
         }
       }
     }

@@ -37,7 +37,9 @@ const Sidebar = () => {
             >
               <TbDatabase className="icon" />
               <p>Data Master</p>
-              <VscTriangleRight className="icon-arrow" />
+              <VscTriangleRight
+                className={isOpenDropdown1 ? 'icon-arrow rotate' : 'icon-arrow'}
+              />
             </button>
             <ul
               className={
@@ -55,7 +57,9 @@ const Sidebar = () => {
             >
               <TbArrowsExchange className="icon" />
               <p>Transaksi</p>
-              <VscTriangleRight className="icon-arrow" />
+              <VscTriangleRight
+                className={isOpenDropdown2 ? 'icon-arrow rotate' : 'icon-arrow'}
+              />
             </button>
             <ul
               className={

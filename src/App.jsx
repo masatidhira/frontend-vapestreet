@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import HomeLayout from './components/HomeLayout';
 import Dashboard from './pages/Dashboard';
 import DataBarang from './pages/DataBarang';

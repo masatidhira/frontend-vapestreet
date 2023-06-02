@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: relative;
 
   .logo {
     color: var(--clr-white);
@@ -15,12 +14,13 @@
     color: var(--clr-white);
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    position: relative;
 
     .avatar {
       width: 35px;
       height: 35px;
       border-radius: 50%;
+      margin-right: 1rem;
     }
 
     .dropdown-button {
@@ -29,35 +29,43 @@
       display: flex;
       align-items: center;
       border-radius: 0;
-      gap: 0.4rem;
+      gap: 1rem;
       padding: 0;
     }
-  }
+    .dropdown-menu {
+      background-color: var(--clr-navigation);
+      color: var(--clr-white);
+      height: 0;
+      position: absolute;
+      top: 120%;
+      right: 0;
+      transition: height 0.5s;
+      overflow: hidden;
+      pointer-events: none;
 
-  .dropdown-menu {
-    background-color: var(--clr-navigation);
-    color: var(--clr-white);
-    padding: 1rem 2rem;
-    position: absolute;
-    bottom: 0;
-    right: 1rem;
-    transform: translateY(0);
-    transition: transform 0.5s;
-    z-index: -1;
+      a,
+      button {
+        color: var(--clr-white);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0;
+        margin: 0 2rem;
 
-    ul > li {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+        .icon {
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
 
-      .icon {
-        width: 1.2rem;
-        height: 1.2rem;
+      button {
+        background-color: transparent;
+        font-weight: normal;
       }
     }
-  }
 
-  .isOpen {
-    transform: translateY(100%);
+    .is-open {
+      height: 6rem;
+    }
   }
 }

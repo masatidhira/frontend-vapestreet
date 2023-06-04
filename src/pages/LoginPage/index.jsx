@@ -1,8 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+// import axios from '../../api/axios';
 import './LoginPage.scss';
 
+// const LOGIN_URL = '/auth';
+
 const LoginPage = () => {
+  const { setAuth } = useAuth();
   const userRef = useRef();
   const errRef = useRef();
 
@@ -17,10 +22,34 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setUser('');
-    setPwd('');
-    setErrMsg('');
-    setSuccess(true);
+
+    try {
+      // const response = await axios.post(
+      //   LOGIN_URL,
+      //   JSON.stringify({ user, pwd }),
+      //   {
+      //     headers: { 'Content-type': 'application/json' },
+      //     withCredentials: true,
+      //   }
+      // );
+      // console.log(response?.data);
+      setAuth({ user, pwd });
+      setUser('');
+      setPwd('');
+      setSuccess(true);
+    } catch (err) {
+      console.log(err);
+      setErrMsg(err.message);
+      // if (!err?.response) {
+      //   setErrMsg('Server tidak merespon');
+      // } else if (err.response?.status === 400) {
+      //   setErrMsg('Tolong isi username dan password');
+      // } else if (err.response?.status === 401) {
+      //   setErrMsg('Username tidak dikenali');
+      // } else {
+      //   setErrMsg('Login gagal');
+      // }
+    }
   };
 
   return (

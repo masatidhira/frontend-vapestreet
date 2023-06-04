@@ -1,13 +1,15 @@
-import { Outlet, Navigate } from 'react-router-dom';
+import { Outlet, Navigate, useLocation } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import Header from '../Header';
 import SideNavigation from '../SideNavigation';
-
 import './HomeLayout.scss';
 
 const HomeLayout = () => {
-  let auth = { token: false };
+  const { auth } = useAuth();
+  const location = useLocation();
+  console.log(auth);
 
-  return auth.token ? (
+  return auth?.user ? (
     <div className="home">
       <Header />
       <SideNavigation />
@@ -16,7 +18,7 @@ const HomeLayout = () => {
       </main>
     </div>
   ) : (
-    <Navigate to="/login" />
+    <Navigate to="/login" state={{ from: location }} replace />
   );
 };
 

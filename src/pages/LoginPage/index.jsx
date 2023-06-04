@@ -1,53 +1,65 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 import './LoginPage.scss';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(false);
+  const userRef = useRef();
+  const errRef = useRef();
 
-  const clearForm = () => {
-    setUsername('');
-    setPassword('');
-  };
+  const [user, setUser] = useState('');
+  const [pwd, setPwd] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const [success, setSuccess] = useState(false);
 
-  const handleLogin = (e) => {
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(username, password);
-
-    if (username !== 'admin' || password !== 'admin') {
-      setError(true);
-    } else {
-      setError(false);
-    }
-
-    clearForm();
+    setUser('');
+    setPwd('');
+    setErrMsg('');
+    setSuccess(true);
   };
 
   return (
-    <div className="loginpage">
-      <div className="content">
-        <div className="logo">LOGIN VAPES STREET</div>
-        <form className="form" onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <p className={error ? 'text-error' : 'text-error hidden'}>
-            *Username atau password salah.
-          </p>
-          <input type="submit" className="btn-login" value="LOGIN" />
-        </form>
-      </div>
-    </div>
+    <>
+      {success ? (
+        <Navigate to="/" />
+      ) : (
+        <main className="loginpage">
+          <section className="content">
+            <div className="logo">LOGIN VAPES STREET</div>
+            <form className="form" onSubmit={(e) => handleSubmit(e)}>
+              <input
+                type="text"
+                ref={userRef}
+                autoComplete="off"
+                onChange={(e) => setUser(e.target.value)}
+                placeholder="Username"
+                value={user}
+                required
+              />
+              <input
+                type="password"
+                onChange={(e) => setPwd(e.target.value)}
+                placeholder="Password"
+                value={pwd}
+                required
+              />
+              <p
+                ref={errRef}
+                className={errMsg ? 'text-error' : 'text-error hidden'}
+              >
+                {errMsg}
+              </p>
+              <button className="btn-login">LOGIN</button>
+            </form>
+          </section>
+        </main>
+      )}
+    </>
   );
 };
 

@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeLayout from './components/HomeLayout';
-import Dashboard from './pages/Dashboard';
-import DataBarang from './pages/DataBarang';
-import Kategori from './pages/Kategori';
-import KeranjangJual from './pages/KeranjangJual';
-import LaporanBulanan from './pages/LaporanBulanan';
-import PengaturanToko from './pages/PengaturanToko';
-import Profile from './pages/Profile';
+import Dashboard from './pages/HomePage/Dashboard';
+import DataBarang from './pages/HomePage/DataBarang';
+import Kategori from './pages/HomePage/Kategori';
+import KeranjangJual from './pages/HomePage/KeranjangJual';
+import LaporanBulanan from './pages/HomePage/LaporanBulanan';
+import PengaturanToko from './pages/HomePage/PengaturanToko';
+import Profile from './pages/HomePage/Profile';
 import LoginPage from './pages/LoginPage';
 
 function App() {

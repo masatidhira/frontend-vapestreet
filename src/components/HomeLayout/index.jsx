@@ -5,7 +5,7 @@ import SideNavigation from '../SideNavigation';
 import './HomeLayout.scss';
 
 const HomeLayout = () => {
-  let auth = { token: true };
+  let auth = { token: false };
 
   return auth.token ? (
     <div className="home">

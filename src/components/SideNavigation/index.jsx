@@ -8,14 +8,14 @@ import {
   TbSettings,
 } from 'react-icons/tb';
 
-import './Sidebar.scss';
+import './SideNavigation.scss';
 
-const Sidebar = () => {
+const SideNavigation = () => {
   const [isOpenDropdown1, setIsOpenDropdown1] = useState(false);
   const [isOpenDropdown2, setIsOpenDropdown2] = useState(false);
 
   return (
-    <nav className="main-nav">
+    <nav className="sidenav">
       <div className="content">
         <div className="logo">
           <p>
@@ -91,4 +91,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideNavigation;

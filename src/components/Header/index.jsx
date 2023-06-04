@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { VscTriangleDown } from 'react-icons/vsc';
 import { RxAvatar } from 'react-icons/rx';
@@ -6,16 +7,23 @@ import { CgLogOut } from 'react-icons/cg';
 
 import './Header.scss';
 
-const Header = ({ isOpenDropdown, handleDropdown }) => {
+const Header = () => {
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+
   return (
     <header className="header">
-      <div className="logo">VAPES STREET</div>
-      <div className="dropdown">
-        <RxAvatar className="avatar" />
-        <button className="dropdown-button" onClick={() => handleDropdown()}>
-          <p>Admin</p>
-          <VscTriangleDown />
-        </button>
+      <div className="content">
+        <div className="logo">VAPES STREET</div>
+        <div className="dropdown">
+          <RxAvatar className="avatar" />
+          <button
+            className="dropdown-button"
+            onClick={() => setIsOpenDropdown(!isOpenDropdown)}
+          >
+            <p>Admin</p>
+            <VscTriangleDown />
+          </button>
+        </div>
         <ul
           className={isOpenDropdown ? 'dropdown-menu is-open' : 'dropdown-menu'}
         >

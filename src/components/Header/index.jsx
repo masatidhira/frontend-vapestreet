@@ -1,14 +1,25 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { VscTriangleDown } from 'react-icons/vsc';
 import { RxAvatar } from 'react-icons/rx';
 import { CgLogOut } from 'react-icons/cg';
-
+import useAuth from '../../hooks/useAuth';
 import './Header.scss';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+
+  const { setAuth } = useAuth();
   const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+    setAuth({});
+    navigate(from, { replace: true });
+  };
 
   return (
     <header className="header">
@@ -34,7 +45,7 @@ const Header = () => {
             </NavLink>
           </li>
           <li>
-            <button>
+            <button onClick={(e) => handleLogout(e)}>
               <CgLogOut className="icon" />
               <p>Logout</p>
             </button>

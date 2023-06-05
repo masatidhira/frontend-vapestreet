@@ -61,3 +61,8 @@ button {
 .mt-1 {
   margin-top: 1rem;
 }
+
+.active {
+  font-weight: bold;
+  pointer-events: none;
+}

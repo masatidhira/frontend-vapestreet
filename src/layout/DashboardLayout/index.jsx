@@ -1,13 +1,12 @@
 import { Outlet, Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import Header from '../Header';
-import SideNavigation from '../SideNavigation';
-import './HomeLayout.scss';
+import Header from '../../components/Header';
+import SideNavigation from '../../components/SideNavigation';
+import './DashboardLayout.scss';
 
-const HomeLayout = () => {
+const DashboardLayout = () => {
   const { auth } = useAuth();
   const location = useLocation();
-  console.log(auth);
 
   return auth?.user ? (
     <div className="home">
@@ -22,4 +21,4 @@ const HomeLayout = () => {
   );
 };
 
-export default HomeLayout;
+export default DashboardLayout;

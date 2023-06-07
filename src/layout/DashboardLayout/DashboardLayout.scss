@@ -1,13 +1,14 @@
 .home {
   width: 100%;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-areas:
     'nav header'
     'nav main';
   grid-template-rows: var(--header-height) 1fr;
   grid-template-columns: var(--nav-width) 1fr;
+  overflow: hidden;
 
   .header {
     grid-area: header;
@@ -17,9 +18,10 @@
     grid-area: nav;
   }
 
-  main {
+  .main-section {
     grid-area: main;
     padding: 2rem 1.5rem;
     height: calc(100vh - var(--header-height));
+    overflow-y: auto;
   }
 }

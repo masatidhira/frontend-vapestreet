@@ -1,0 +1,35 @@
+.card-one {
+  background-color: cornflowerblue;
+  width: 240px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #acacac;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .title {
+    background-color: var(--clr-navigation);
+    color: var(--clr-white);
+    padding: 0.6rem;
+  }
+
+  .count {
+    background-color: var(--clr-white);
+    color: var(--clr-gray);
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-top: 1px solid #acacac;
+    border-bottom: 1px solid #acacac;
+  }
+
+  .link {
+    background-color: var(--clr-gray);
+    color: var(--clr-navigation);
+    padding: 0.4rem 0.6rem;
+  }
+}

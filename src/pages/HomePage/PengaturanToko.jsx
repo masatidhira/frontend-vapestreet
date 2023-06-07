@@ -1,5 +1,5 @@
 const PengaturanToko = () => {
-  return <div>PengaturanToko</div>;
+  return <div>Pengaturan Toko</div>;
 };
 
 export default PengaturanToko;

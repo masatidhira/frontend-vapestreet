@@ -12,9 +12,9 @@ const DashboardLayout = () => {
     <div className="home">
       <Header />
       <SideNavigation />
-      <main>
+      <section className="main-section">
         <Outlet />
-      </main>
+      </section>
     </div>
   ) : (
     <Navigate to="/login" state={{ from: location }} replace />

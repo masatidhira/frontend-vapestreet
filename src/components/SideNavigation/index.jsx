@@ -48,7 +48,7 @@ const SideNavigation = () => {
               }
             >
               <li>
-                <NavLink to="/data-barang">Barang</NavLink>
+                <NavLink to="/barang">Barang</NavLink>
               </li>
               <li>
                 <NavLink to="/kategori">Kategori</NavLink>

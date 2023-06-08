@@ -1,5 +1,5 @@
 .sidenav {
-  background-color: var(--clr-navigation);
+  background-color: var(--clr-blue);
   color: var(--clr-white);
   width: var(--nav-width);
   height: 100vh;
@@ -73,7 +73,7 @@
         .dropdown-links {
           height: 6rem;
           background-color: var(--clr-white);
-          color: var(--clr-navigation);
+          color: var(--clr-blue);
           display: flex;
           flex-direction: column;
           justify-content: center;

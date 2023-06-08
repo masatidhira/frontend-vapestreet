@@ -1,6 +1,6 @@
 .header {
   background-color: var(--clr-white);
-  color: var(--clr-gray);
+  color: var(--clr-dark-gray);
   width: 100%;
   height: var(--header-height);
   position: relative;
@@ -14,6 +14,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1.5rem;
+    box-shadow: 0 2px 3px 0 var(--clr-dark-gray);
     position: fixed;
     top: 0;
     right: 0;
@@ -36,7 +37,7 @@
 
       .dropdown-button {
         background-color: transparent;
-        color: black;
+        color: var(--clr-dark-gray);
         display: flex;
         align-items: center;
         border-radius: 0;
@@ -46,11 +47,12 @@
         p {
           letter-spacing: 1px;
         }
-      }
 
-      button {
-        background-color: transparent;
-        font-weight: normal;
+        &:hover {
+          color: var(--clr-dark);
+          outline: none;
+          border-color: transparent;
+        }
       }
     }
 
@@ -67,7 +69,7 @@
 
       a,
       button {
-        color: black;
+        color: var(--clr-dark);
         display: flex;
         align-items: center;
         gap: 1rem;

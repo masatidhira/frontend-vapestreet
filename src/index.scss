@@ -2,17 +2,21 @@
   --nav-width: min(100%, 250px);
   --header-height: 4rem;
 
-  --clr-navigation: blue;
   --clr-white: #ffffff;
-  --clr-gray: #d8d8d8;
+  --clr-red: #e04750;
+  --clr-green: #5bca8d;
+  --clr-blue: #4d73de;
+  --clr-dark-gray: #83858d;
+  --clr-gray: #979b9e;
+  --clr-light-gray: #f5f9fc;
   --clr-dark: black;
+
+  background-color: var(--clr-light-gray);
+  color: var(--clr-dark);
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color: var(--clr-dark);
-  background-color: var(--clr-gray);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

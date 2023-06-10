@@ -12,7 +12,7 @@ const Dashboard = () => {
   return (
     <>
       <h1 className="page-title">DASHBOARD</h1>
-      <ul className="dashboard-cards">
+      <ul className="flex-row">
         {cardData.map((data, i) => (
           <li key={i}>
             <CardOne

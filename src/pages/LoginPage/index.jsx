@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 // import axios from '../../api/axios';
+import ButtonOne from '../../components/Buttons/ButtonOne';
 import './LoginPage.scss';
 
 // const LOGIN_URL = '/auth';
@@ -84,7 +85,7 @@ const LoginPage = () => {
           >
             {errMsg}
           </p>
-          <button className="btn-login">LOGIN</button>
+          <ButtonOne className="blue">LOGIN</ButtonOne>
         </form>
       </section>
     </div>

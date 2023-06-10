@@ -6,6 +6,7 @@
   --clr-red: #e04750;
   --clr-green: #5bca8d;
   --clr-blue: #4d73de;
+  --clr-gold: #f7c440;
   --clr-dark-gray: #83858d;
   --clr-gray: #979b9e;
   --clr-light-gray: #f5f9fc;
@@ -39,25 +40,6 @@ a {
   text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
-
-  &:hover {
-    border-color: #646cff;
-  }
-  &:focus,
-  &:focus-visible {
-    outline: 1px solid black;
-  }
-}
-
 .mb-1 {
   margin-bottom: 1rem;
 }
@@ -69,4 +51,27 @@ button {
 .active {
   font-weight: bold;
   pointer-events: none;
+}
+
+.red,
+.green,
+.blue,
+.gold {
+  color: var(--clr-white);
+}
+
+.red {
+  background-color: var(--clr-red) !important;
+}
+
+.green {
+  background-color: var(--clr-green) !important;
+}
+
+.blue {
+  background-color: var(--clr-blue) !important;
+}
+
+.gold {
+  background-color: var(--clr-gold) !important;
 }

@@ -1,8 +1,13 @@
 const Barang = () => {
   return (
-    <div>
-      <p>BARANG</p>
-    </div>
+    <>
+      <h1 className="page-title">Data Barang</h1>
+      <div className="flex-row">
+        <button className="button blue">Insert Data</button>
+        <button className="button gold">Sortir Stok Kurang</button>
+        <button className="button green">Refresh Data</button>
+      </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import {
   TbArrowsExchange,
   TbSettings,
 } from 'react-icons/tb';
+import ButtonOne from '../Buttons/ButtonOne';
 
 import './SideNavigation.scss';
 
@@ -32,7 +33,7 @@ const SideNavigation = () => {
           </li>
           <hr />
           <li className="nav-dropdown mb-1">
-            <button
+            <ButtonOne
               className="dropdown-button"
               onClick={() => setIsOpenDropdown1(!isOpenDropdown1)}
             >
@@ -41,7 +42,7 @@ const SideNavigation = () => {
               <VscTriangleRight
                 className={isOpenDropdown1 ? 'icon-arrow rotate' : 'icon-arrow'}
               />
-            </button>
+            </ButtonOne>
             <ul
               className={
                 isOpenDropdown1 ? 'dropdown-links' : 'dropdown-links closed'
@@ -56,7 +57,7 @@ const SideNavigation = () => {
             </ul>
           </li>
           <li className="nav-dropdown">
-            <button
+            <ButtonOne
               className="dropdown-button"
               onClick={() => setIsOpenDropdown2(!isOpenDropdown2)}
             >
@@ -65,7 +66,7 @@ const SideNavigation = () => {
               <VscTriangleRight
                 className={isOpenDropdown2 ? 'icon-arrow rotate' : 'icon-arrow'}
               />
-            </button>
+            </ButtonOne>
             <ul
               className={
                 isOpenDropdown2 ? 'dropdown-links' : 'dropdown-links closed'

@@ -1,17 +1,16 @@
 import { Outlet, Navigate, useLocation } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
-import Header from '../../components/Header';
-import SideNavigation from '../../components/SideNavigation';
-import './DashboardLayout.scss';
+import useAuth from '../hooks/useAuth';
+import Header from '../components/Header';
+import SideNav from '../components/SideNav';
 
-const DashboardLayout = () => {
+const ProtectedLayout = () => {
   const { auth } = useAuth();
   const location = useLocation();
 
   return auth?.user ? (
     <div className="home">
       <Header />
-      <SideNavigation />
+      <SideNav />
       <section className="main-section">
         <Outlet />
       </section>
@@ -21,4 +20,4 @@ const DashboardLayout = () => {
   );
 };
 
-export default DashboardLayout;
+export default ProtectedLayout;

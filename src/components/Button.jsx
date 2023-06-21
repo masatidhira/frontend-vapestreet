@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import './Buttons.scss';
 
-const ButtonOne = (props) => {
+const Button = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
     props.onClick();
@@ -9,7 +8,7 @@ const ButtonOne = (props) => {
 
   return (
     <button
-      className={'button button-one ' + props.className}
+      className={'button ' + props.className}
       onClick={props.onClick ? (e) => handleClick(e) : null}
     >
       {props.children}
@@ -17,4 +16,4 @@ const ButtonOne = (props) => {
   );
 };
 
-export default ButtonOne;
+export default Button;

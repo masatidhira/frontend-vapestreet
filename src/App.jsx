@@ -1,14 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+
 import AppLayout from './layout/AppLayout';
-import DashboardLayout from './layout/DashboardLayout';
-import Dashboard from './pages/HomePage/Dashboard';
-import Barang from './pages/HomePage/Barang';
-import Kategori from './pages/HomePage/Kategori';
-import TransaksiJual from './pages/HomePage/TransaksiJual';
-import LaporanPenjualan from './pages/HomePage/LaporanPenjualan';
-import PengaturanToko from './pages/HomePage/PengaturanToko';
-import Profile from './pages/HomePage/Profile';
+import ProtectedLayout from './layout/ProtectedLayout';
+
 import LoginPage from './pages/LoginPage';
+import MissingPage from "./pages/MissingPage"
+
+import Dashboard from './components/Sections/Dashboard';
+import Barang from './components/Sections/Barang';
+import Kategori from './components/Sections/Kategori';
+import TransaksiJual from './components/Sections/TransaksiJual';
+import LaporanPenjualan from './components/Sections/LaporanPenjualan';
+import PengaturanToko from './components/Sections/PengaturanToko';
+import Profile from './components/Sections/Profile';
 
 function App() {
   return (
@@ -18,7 +22,7 @@ function App() {
         <Route path="login" element={<LoginPage />} />
 
         {/* PROTECTED ROUTE */}
-        <Route element={<DashboardLayout />}>
+        <Route element={<ProtectedLayout />}>
           <Route path="/" element={<Dashboard />} exact />
           <Route path="barang" element={<Barang />} exact />
           <Route path="kategori" element={<Kategori />} exact />
@@ -32,7 +36,8 @@ function App() {
           <Route path="profile" element={<Profile />} exact />
         </Route>
 
-        <Route path="*" element={<div>MISSING</div>} />
+        {/* MISSING ROUTE */}
+        <Route path="*" element={<MissingPage />} />
       </Route>
     </Routes>
   );

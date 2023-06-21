@@ -1,0 +1,26 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600&display=swap');
+$textFont:  'Montserrat', Helvetica, Arial, sans-serif !default;
+
+
+// COLORS
+$clrWhite: #ffffff;
+$clrRed: #e04750;
+$clrGreen: #5bca8d;
+$clrBlue: #4d73de;
+$clrGold: #f7c440;
+$clrDarkGray: #83858d;
+$clrGray: #979b9e;
+$clrLightGray: #f5f9fc;
+$clrDark: black;
+
+
+$nav-width: min(100%, 250px);
+$headerHeight: 4rem;
+
+
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;

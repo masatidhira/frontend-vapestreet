@@ -1,5 +1,4 @@
-import CardOne from '../../components/Cards/CardOne';
-import './HomePage.scss';
+import Card from '../Card';
 
 const Dashboard = () => {
   const cardData = [
@@ -15,7 +14,7 @@ const Dashboard = () => {
       <ul className="flex-row">
         {cardData.map((data, i) => (
           <li key={i}>
-            <CardOne
+            <Card
               title={data.title}
               count={data.count}
               linkText={data.linkText}

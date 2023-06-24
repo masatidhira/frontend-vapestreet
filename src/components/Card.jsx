@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import './Cards.scss';
 
 export default function CardOne({ title, count, linkText, link }) {
   return (

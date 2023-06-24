@@ -9,7 +9,11 @@
   './base/base';
 
 @import
-'./components/Button.scss';
+  './components/Button.scss';
+
+@import
+  './pages/LoginPage.scss',
+  './pages/MissingPage.scss';
 
 :root {
   --nav-width: min(100%, 250px);

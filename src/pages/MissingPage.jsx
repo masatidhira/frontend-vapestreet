@@ -1,9 +1,8 @@
 
-
 const MissingPage = () => {
     return (
-        <div>
-            MISSING PAGE
+        <div className="missingpage">
+            <h1>MISSING PAGE</h1>
         </div>
     )
 }

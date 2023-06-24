@@ -34,7 +34,7 @@ function App() {
           />
           <Route path="pengaturan-toko" element={<PengaturanToko />} exact />
           <Route path="profile" element={<Profile />} exact />
-        </Route>
+        </Route> 
 
         {/* MISSING ROUTE */}
         <Route path="*" element={<MissingPage />} />

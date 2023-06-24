@@ -7,11 +7,9 @@ import {
   TbArrowsExchange,
   TbSettings,
 } from 'react-icons/tb';
-import ButtonOne from '../Buttons/ButtonOne';
+import Button from './Button';
 
-import './SideNavigation.scss';
-
-const SideNavigation = () => {
+const SideNav = () => {
   const [isOpenDropdown1, setIsOpenDropdown1] = useState(false);
   const [isOpenDropdown2, setIsOpenDropdown2] = useState(false);
 
@@ -33,7 +31,7 @@ const SideNavigation = () => {
           </li>
           <hr />
           <li className="nav-dropdown mb-1">
-            <ButtonOne
+            <Button
               className="dropdown-button"
               onClick={() => setIsOpenDropdown1(!isOpenDropdown1)}
             >
@@ -42,7 +40,7 @@ const SideNavigation = () => {
               <VscTriangleRight
                 className={isOpenDropdown1 ? 'icon-arrow rotate' : 'icon-arrow'}
               />
-            </ButtonOne>
+            </Button>
             <ul
               className={
                 isOpenDropdown1 ? 'dropdown-links' : 'dropdown-links closed'
@@ -57,7 +55,7 @@ const SideNavigation = () => {
             </ul>
           </li>
           <li className="nav-dropdown">
-            <ButtonOne
+            <Button
               className="dropdown-button"
               onClick={() => setIsOpenDropdown2(!isOpenDropdown2)}
             >
@@ -66,7 +64,7 @@ const SideNavigation = () => {
               <VscTriangleRight
                 className={isOpenDropdown2 ? 'icon-arrow rotate' : 'icon-arrow'}
               />
-            </ButtonOne>
+            </Button>
             <ul
               className={
                 isOpenDropdown2 ? 'dropdown-links' : 'dropdown-links closed'
@@ -92,4 +90,4 @@ const SideNavigation = () => {
   );
 };
 
-export default SideNavigation;
+export default SideNav;
